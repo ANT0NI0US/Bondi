@@ -1,0 +1,213 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --yellow-color: #ffc400;
+  --bg-btn: #363636;
+  --main-transition: 0.3s;
+  --section-color: rgba(0, 0, 0, 0.055);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+input {
+  outline: none;
+}
+/* start coponents */
+.main-btn {
+  color: var(--yellow-color);
+  background-color: var(--bg-btn);
+  padding: 10px 15px;
+  font-weight: bold;
+  transition: var(--main-transition);
+  width: fit-content;
+}
+.main-btn:hover {
+  background-color: #ff3150e3;
+}
+.main-head::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  bottom: -11px;
+  background-color: var(--green-color);
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* end coponents */
+/* start styling navbar */
+.navbar {
+  background-color: var(--dark-color);
+}
+.navbar .search {
+  border-left: 1px solid var(--green-color);
+}
+.navbar .search svg {
+  color: var(--green-color);
+}
+.navbar .navbar-toggler {
+  border-color: white;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--green-color) !important;
+}
+/* end styling navbar */
+
+/* start stying main page */
+.main-page {
+  background-color: var(--dark-color);
+  min-height: calc(100vh - 88px);
+}
+@media (max-width: 992px) {
+  .main-page {
+    min-height: calc(100vh - 70px);
+  }
+}
+/* end stying main page */
+
+/* start styling graphic design */
+.graphic-design .information span {
+  color: var(--yellow-color);
+}
+.graphic-design .information .col {
+  counter-increment: number;
+}
+.graphic-design .information .col::before {
+  content: counter(number);
+  color: rgb(0 0 0 / 11%);
+  top: -110px;
+  position: absolute;
+  font-size: 200px;
+  left: 130px;
+}
+.graphic-design .information .icon-holder {
+  height: 200px;
+}
+.graphic-design .information .icon-holder .icon,
+.graphic-design .information .icon-holder .number {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.graphic-design .information .icon-holder .icon {
+  color: var(--green-color);
+}
+.graphic-design .information .icon-holder .number {
+  font-size: 210px;
+  color: var(--section-color);
+}
+/* end styling graphic design */
+/* start styling portfolio */
+.portfolio {
+  background-color: var(--section-color);
+}
+.portfolio .links li a {
+  transition: var(--main-transition);
+}
+.portfolio .links li:hover a:not(.active) {
+  color: var(--green-color) !important;
+}
+.portfolio .images .photo::before {
+  content: "Application";
+  position: absolute;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  background-color: rgb(51 209 204 / 76%);
+  font-weight: bold;
+  font-size: 30px;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(calc(-100% - 5px));
+  transition: var(--main-transition);
+}
+.portfolio .images .photo:hover::before {
+  transform: translate(0);
+}
+/* end styling portfolio */
+/* start styling stuff */
+.stuff .content {
+  max-width: 500px;
+}
+/* end styling stuff */
+/* start styling team */
+.team {
+  background-color: var(--section-color);
+}
+.team .head h2 {
+  color: var(--yellow-color);
+}
+.team .box .text {
+  background-color: var(--green-color);
+}
+/* end styling team */
+/* start styling project */
+.project {
+  background-color: var(--dark-color);
+}
+/* end styling project */
+/* start styling subscribe */
+.subscribe {
+  background-color: var(--yellow-color);
+}
+.subscribe span {
+  color: var(--dark-color);
+}
+.subscribe a {
+  color: var(--yellow-color);
+  background-color: var(--dark-color);
+  padding: 10px 15px;
+  width: fit-content;
+}
+.subscribe .sletter input {
+  caret-color: white;
+}
+.subscribe .sletter input::placeholder {
+  color: white;
+}
+/* end styling subscribe */
+/* start styling footer */
+.footer {
+  background-color: var(--dark-color);
+}
+.footer .informations .bondi {
+  color: var(--yellow-color);
+}
+.footer .links li svg {
+  width: 20px;
+  height: 20px;
+}
+.footer .informations .links .facebook {
+  background-color: #1877f2;
+}
+.footer .informations .links .twitter {
+  background-color: #1da1f2;
+}
+.footer .informations .links .linkedin {
+  background-color: #0a66c2;
+}
+.footer .informations .links .youtube {
+  background-color: #ff0000;
+}
+/* end styling footer */
